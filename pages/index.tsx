@@ -3,6 +3,14 @@ import Head from "next/head";
 import Image from "next/image";
 import { Fragment, ReactElement } from "react";
 import MainLayout from "../components/layouts/MainLayout";
+import AboutSection from "../components/pages/home/AboutSection";
+import DailyHadits from "../components/pages/home/DailyHadits";
+import EventSection from "../components/pages/home/EventSection";
+import FaithSection from "../components/pages/home/FaithSection";
+import FeatureSection from "../components/pages/home/FeatureSection";
+import HomeBanner from "../components/pages/home/HomeBanner";
+import ProgramSection from "../components/pages/home/ProgramSection";
+import ServiceSection from "../components/pages/home/ServiceSection";
 
 const Home: NextPageWithLayout = () => {
 	return (
@@ -10,7 +18,22 @@ const Home: NextPageWithLayout = () => {
 			<Head>
 				<title>Abudarda</title>
 			</Head>
-			<h1>Welcome</h1>
+			{/* Home Banner */}
+			<HomeBanner />
+			{/* About */}
+			<AboutSection />
+			{/* Feature */}
+			<FeatureSection />
+			{/* Service */}
+			<ServiceSection />
+			{/* Program */}
+			<ProgramSection />
+			{/* Faith Section */}
+			<FaithSection />
+			{/* Daily Hadits */}
+			<DailyHadits />
+			{/* Events */}
+			<EventSection />
 		</Fragment>
 	);
 };
