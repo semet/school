@@ -1,9 +1,9 @@
 import React, { Fragment, useEffect, useState } from "react";
 
 const ScrollToTop = () => {
-	const [bottomPosition, setBottomPosition] = useState("");
-	const [opacity, setOpacity] = useState("");
-	const [transition, setTransition] = useState("");
+	const [bottomPosition, setBottomPosition] = useState("-30%");
+	const [opacity, setOpacity] = useState("1");
+	const [transition, setTransition] = useState("all .5s ease");
 
 	const handleScroll = () => {
 		if (window.scrollY > 300) {
@@ -13,7 +13,7 @@ const ScrollToTop = () => {
 		} else {
 			setBottomPosition("-30%");
 			setOpacity("0");
-			setTransition("all .5s ease");
+			setTransition("z");
 		}
 	};
 
