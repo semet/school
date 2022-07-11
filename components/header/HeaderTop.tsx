@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import { useListener } from "react-bus";
 
 const HeaderTop = () => {
+	const headerRef = useRef<HTMLDivElement>(null);
+	const [isShow, setIsShow] = useState("none");
+
+	useListener("ellepsisToggled", () => {
+		headerRef.current?.classList.toggle("open");
+		isShow === "none" ? setIsShow("block") : setIsShow("none");
+	});
 	return (
-		<div className="header-top">
+		<div className="header-top open" style={{ display: `${isShow}` }} ref={headerRef}>
 			<div className="header-top-area">
 				<ul className="left lab-ul">
 					<li>

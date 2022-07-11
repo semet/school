@@ -1,18 +1,27 @@
-import React from "react";
+import Link from "next/link";
+import React, { useRef } from "react";
+import { useListener } from "react-bus";
 
 const MainMenu = () => {
+	const menuRef = useRef<HTMLUListElement>(null);
+	useListener("menuToggled", () => {
+		menuRef.current?.classList.toggle("active");
+	});
+
 	return (
 		<div className="header-bottom">
 			<div className="header-wrapper">
 				<div className="menu-area justify-content-between w-100">
-					<ul className="menu lab-ul">
+					<ul className="menu lab-ul" ref={menuRef}>
 						<li>
-							<a href="index.html">Home</a>
+							<Link href="/">
+								<a>Home</a>
+							</Link>
 						</li>
 						<li>
 							<a href="about.html">About</a>
 						</li>
-						<li>
+						<li className="menu-item-has-children">
 							<a href="#0">Events</a>
 							<ul className="submenu">
 								<li>
@@ -23,7 +32,7 @@ const MainMenu = () => {
 								</li>
 							</ul>
 						</li>
-						<li>
+						<li className="menu-item-has-children">
 							<a href="#0">Programs</a>
 							<ul className="submenu">
 								<li>
@@ -34,7 +43,7 @@ const MainMenu = () => {
 								</li>
 							</ul>
 						</li>
-						<li>
+						<li className="menu-item-has-children">
 							<a href="#0">Pages</a>
 							<ul className="submenu">
 								<li>
