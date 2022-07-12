@@ -30,13 +30,18 @@ const MainMenu = () => {
 						</li>
 
 						<li className="menu-item-has-children">
-							<a href="#0">WArga Sekolah</a>
+							<a href="#">Warga Sekolah</a>
 							<ul className="submenu">
 								<li>
-									<a href="programs.html">Programs</a>
+									<Link href="/teacher ">
+										<a>Guru</a>
+									</Link>
 								</li>
 								<li>
-									<a href="program-single.html">Program Single</a>
+									<a href="program-single.html">Siswa</a>
+								</li>
+								<li>
+									<a href="program-single.html">Alumni</a>
 								</li>
 							</ul>
 						</li>

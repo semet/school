@@ -1,4 +1,4 @@
-import type { NextPageWithLayout } from "next";
+import type { GetStaticProps, NextPageWithLayout } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { Fragment, ReactElement } from "react";
@@ -11,8 +11,13 @@ import FeatureSection from "../components/pages/home/FeatureSection";
 import HomeBanner from "../components/pages/home/HomeBanner";
 import ProgramSection from "../components/pages/home/ProgramSection";
 import ServiceSection from "../components/pages/home/ServiceSection";
+import { prisma } from "../prisma/db";
 
-const Home: NextPageWithLayout = () => {
+interface Props {
+	description: string;
+}
+
+const Home: NextPageWithLayout<Props> = ({ description }) => {
 	return (
 		<Fragment>
 			<Head>
@@ -21,7 +26,7 @@ const Home: NextPageWithLayout = () => {
 			{/* Home Banner */}
 			<HomeBanner />
 			{/* About */}
-			<AboutSection />
+			<AboutSection description={description} />
 			{/* Feature */}
 			<FeatureSection />
 			{/* Service */}
@@ -38,4 +43,15 @@ const Home: NextPageWithLayout = () => {
 	);
 };
 Home.getLayout = (page: ReactElement) => <MainLayout>{page}</MainLayout>;
+
 export default Home;
+
+export const getStaticProps: GetStaticProps = async () => {
+	const about = await prisma.about.findFirst();
+
+	return {
+		props: {
+			description: JSON.parse(JSON.stringify(about?.description)),
+		},
+	};
+};

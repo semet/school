@@ -21,7 +21,7 @@ const EventPage: NextPageWithLayout<Props> = ({ events, upcomingEvent }) => {
 				<title>Events</title>
 			</Head>
 			{/* Individual Page Header */}
-			<PageHeader title="EVents " />
+			<PageHeader title="Events " />
 			{/* content */}
 			<section className="event-section padding-tb padding-b shape-4">
 				<div className="container">
