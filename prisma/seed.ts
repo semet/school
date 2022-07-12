@@ -177,7 +177,7 @@ const departmentSeed = async () => {
 						email: faker.internet.email(),
 						password: hashSync("123456", 10),
 						phone: faker.phone.number(),
-						photo: faker.image.people(259, 370, true),
+						photo: faker.image.people(200, 200, true),
 						gender: faker.name.gender(true) as Gender,
 						role: "HEADMASTER",
 						emailVerified: true,
@@ -230,7 +230,7 @@ const departmentSeed = async () => {
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
 									address: faker.address.streetAddress(),
-									photo: faker.image.people(259, 370, true),
+									photo: faker.image.people(200, 200, true),
 									gender: faker.name.gender(true) as Gender,
 								};
 
@@ -268,7 +268,7 @@ const departmentSeed = async () => {
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
 									address: faker.address.streetAddress(),
-									photo: faker.image.people(259, 370, true),
+									photo: faker.image.people(200, 200, true),
 									gender: faker.name.gender(true) as Gender,
 								};
 
@@ -321,7 +321,7 @@ const departmentSeed = async () => {
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
 									address: faker.address.streetAddress(),
-									photo: faker.image.people(259, 370, true),
+									photo: faker.image.people(200, 200, true),
 									gender: faker.name.gender(true) as Gender,
 								};
 
@@ -359,7 +359,7 @@ const departmentSeed = async () => {
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
 									address: faker.address.streetAddress(),
-									photo: faker.image.people(259, 370, true),
+									photo: faker.image.people(200, 200, true),
 									gender: faker.name.gender(true) as Gender,
 								};
 
@@ -412,7 +412,7 @@ const departmentSeed = async () => {
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
 									address: faker.address.streetAddress(),
-									photo: faker.image.people(259, 370, true),
+									photo: faker.image.people(200, 200, true),
 									gender: faker.name.gender(true) as Gender,
 								};
 
@@ -450,7 +450,7 @@ const departmentSeed = async () => {
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
 									address: faker.address.streetAddress(),
-									photo: faker.image.people(259, 370, true),
+									photo: faker.image.people(200, 200, true),
 									gender: faker.name.gender(true) as Gender,
 								};
 
@@ -503,7 +503,7 @@ const departmentSeed = async () => {
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
 									address: faker.address.streetAddress(),
-									photo: faker.image.people(259, 370, true),
+									photo: faker.image.people(200, 200, true),
 									gender: faker.name.gender(true) as Gender,
 								};
 
@@ -541,7 +541,7 @@ const departmentSeed = async () => {
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
 									address: faker.address.streetAddress(),
-									photo: faker.image.people(259, 370, true),
+									photo: faker.image.people(200, 200, true),
 									gender: faker.name.gender(true) as Gender,
 								};
 
@@ -594,7 +594,7 @@ const departmentSeed = async () => {
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
 									address: faker.address.streetAddress(),
-									photo: faker.image.people(259, 370, true),
+									photo: faker.image.people(200, 200, true),
 									gender: faker.name.gender(true) as Gender,
 								};
 
@@ -632,7 +632,7 @@ const departmentSeed = async () => {
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
 									address: faker.address.streetAddress(),
-									photo: faker.image.people(259, 370, true),
+									photo: faker.image.people(200, 200, true),
 									gender: faker.name.gender(true) as Gender,
 								};
 
@@ -685,7 +685,7 @@ const departmentSeed = async () => {
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
 									address: faker.address.streetAddress(),
-									photo: faker.image.people(259, 370, true),
+									photo: faker.image.people(200, 200, true),
 									gender: faker.name.gender(true) as Gender,
 								};
 
@@ -723,7 +723,7 @@ const departmentSeed = async () => {
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
 									address: faker.address.streetAddress(),
-									photo: faker.image.people(259, 370, true),
+									photo: faker.image.people(200, 200, true),
 									gender: faker.name.gender(true) as Gender,
 								};
 
@@ -750,7 +750,7 @@ const departmentSeed = async () => {
 						email: faker.internet.email(),
 						password: hashSync("123456", 10),
 						phone: faker.phone.number(),
-						photo: faker.image.people(259, 370, true),
+						photo: faker.image.people(200, 200, true),
 						gender: faker.name.gender(true) as Gender,
 						role: "HEADMASTER",
 						emailVerified: true,
@@ -803,7 +803,7 @@ const departmentSeed = async () => {
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
 									address: faker.address.streetAddress(),
-									photo: faker.image.people(259, 370, true),
+									photo: faker.image.people(200, 200, true),
 									gender: faker.name.gender(true) as Gender,
 								};
 
@@ -841,7 +841,7 @@ const departmentSeed = async () => {
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
 									address: faker.address.streetAddress(),
-									photo: faker.image.people(259, 370, true),
+									photo: faker.image.people(200, 200, true),
 									gender: faker.name.gender(true) as Gender,
 								};
 
@@ -894,7 +894,7 @@ const departmentSeed = async () => {
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
 									address: faker.address.streetAddress(),
-									photo: faker.image.people(259, 370, true),
+									photo: faker.image.people(200, 200, true),
 									gender: faker.name.gender(true) as Gender,
 								};
 
@@ -932,7 +932,7 @@ const departmentSeed = async () => {
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
 									address: faker.address.streetAddress(),
-									photo: faker.image.people(259, 370, true),
+									photo: faker.image.people(200, 200, true),
 									gender: faker.name.gender(true) as Gender,
 								};
 
@@ -985,7 +985,7 @@ const departmentSeed = async () => {
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
 									address: faker.address.streetAddress(),
-									photo: faker.image.people(259, 370, true),
+									photo: faker.image.people(200, 200, true),
 									gender: faker.name.gender(true) as Gender,
 								};
 
@@ -1023,7 +1023,7 @@ const departmentSeed = async () => {
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
 									address: faker.address.streetAddress(),
-									photo: faker.image.people(259, 370, true),
+									photo: faker.image.people(200, 200, true),
 									gender: faker.name.gender(true) as Gender,
 								};
 
@@ -1050,7 +1050,7 @@ const departmentSeed = async () => {
 						email: faker.internet.email(),
 						password: hashSync("123456", 10),
 						phone: faker.phone.number(),
-						photo: faker.image.people(259, 370, true),
+						photo: faker.image.people(200, 200, true),
 						gender: faker.name.gender(true) as Gender,
 						role: "HEADMASTER",
 						emailVerified: true,
@@ -1103,7 +1103,7 @@ const departmentSeed = async () => {
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
 									address: faker.address.streetAddress(),
-									photo: faker.image.people(259, 370, true),
+									photo: faker.image.people(200, 200, true),
 									gender: faker.name.gender(true) as Gender,
 								};
 
@@ -1141,7 +1141,7 @@ const departmentSeed = async () => {
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
 									address: faker.address.streetAddress(),
-									photo: faker.image.people(259, 370, true),
+									photo: faker.image.people(200, 200, true),
 									gender: faker.name.gender(true) as Gender,
 								};
 
@@ -1194,7 +1194,7 @@ const departmentSeed = async () => {
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
 									address: faker.address.streetAddress(),
-									photo: faker.image.people(259, 370, true),
+									photo: faker.image.people(200, 200, true),
 									gender: faker.name.gender(true) as Gender,
 								};
 
@@ -1232,7 +1232,7 @@ const departmentSeed = async () => {
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
 									address: faker.address.streetAddress(),
-									photo: faker.image.people(259, 370, true),
+									photo: faker.image.people(200, 200, true),
 									gender: faker.name.gender(true) as Gender,
 								};
 
@@ -1285,7 +1285,7 @@ const departmentSeed = async () => {
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
 									address: faker.address.streetAddress(),
-									photo: faker.image.people(259, 370, true),
+									photo: faker.image.people(200, 200, true),
 									gender: faker.name.gender(true) as Gender,
 								};
 
@@ -1323,7 +1323,7 @@ const departmentSeed = async () => {
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
 									address: faker.address.streetAddress(),
-									photo: faker.image.people(259, 370, true),
+									photo: faker.image.people(200, 200, true),
 									gender: faker.name.gender(true) as Gender,
 								};
 
@@ -1382,7 +1382,7 @@ const lessonSeed = async () => {
 						birthDate: faker.date.birthdate(),
 						birthPlace: faker.address.streetAddress(),
 						address: faker.address.streetAddress(),
-						photo: faker.image.people(259, 370, true),
+						photo: faker.image.people(200, 200, true),
 						gender: faker.name.gender(true) as Gender,
 					},
 				});
@@ -1431,7 +1431,7 @@ const lessonSeed = async () => {
 						birthDate: faker.date.birthdate(),
 						birthPlace: faker.address.streetAddress(),
 						address: faker.address.streetAddress(),
-						photo: faker.image.people(259, 370, true),
+						photo: faker.image.people(200, 200, true),
 						gender: faker.name.gender(true) as Gender,
 					},
 				});
@@ -1480,7 +1480,7 @@ const lessonSeed = async () => {
 						birthDate: faker.date.birthdate(),
 						birthPlace: faker.address.streetAddress(),
 						address: faker.address.streetAddress(),
-						photo: faker.image.people(259, 370, true),
+						photo: faker.image.people(200, 200, true),
 						gender: faker.name.gender(true) as Gender,
 					},
 				});
@@ -1529,7 +1529,7 @@ const lessonSeed = async () => {
 						birthDate: faker.date.birthdate(),
 						birthPlace: faker.address.streetAddress(),
 						address: faker.address.streetAddress(),
-						photo: faker.image.people(259, 370, true),
+						photo: faker.image.people(200, 200, true),
 						gender: faker.name.gender(true) as Gender,
 					},
 				});
@@ -1578,7 +1578,7 @@ const lessonSeed = async () => {
 						birthDate: faker.date.birthdate(),
 						birthPlace: faker.address.streetAddress(),
 						address: faker.address.streetAddress(),
-						photo: faker.image.people(259, 370, true),
+						photo: faker.image.people(200, 200, true),
 						gender: faker.name.gender(true) as Gender,
 					},
 				});
@@ -1627,7 +1627,7 @@ const lessonSeed = async () => {
 						birthDate: faker.date.birthdate(),
 						birthPlace: faker.address.streetAddress(),
 						address: faker.address.streetAddress(),
-						photo: faker.image.people(259, 370, true),
+						photo: faker.image.people(200, 200, true),
 						gender: faker.name.gender(true) as Gender,
 					},
 				});
@@ -1676,7 +1676,7 @@ const lessonSeed = async () => {
 						birthDate: faker.date.birthdate(),
 						birthPlace: faker.address.streetAddress(),
 						address: faker.address.streetAddress(),
-						photo: faker.image.people(259, 370, true),
+						photo: faker.image.people(200, 200, true),
 						gender: faker.name.gender(true) as Gender,
 					},
 				});
@@ -1725,7 +1725,7 @@ const lessonSeed = async () => {
 						birthDate: faker.date.birthdate(),
 						birthPlace: faker.address.streetAddress(),
 						address: faker.address.streetAddress(),
-						photo: faker.image.people(259, 370, true),
+						photo: faker.image.people(200, 200, true),
 						gender: faker.name.gender(true) as Gender,
 					},
 				});
@@ -1780,7 +1780,7 @@ const lessonSeed = async () => {
 						birthDate: faker.date.birthdate(),
 						birthPlace: faker.address.streetAddress(),
 						address: faker.address.streetAddress(),
-						photo: faker.image.people(259, 370, true),
+						photo: faker.image.people(200, 200, true),
 						gender: faker.name.gender(true) as Gender,
 					},
 				});
@@ -1829,7 +1829,7 @@ const lessonSeed = async () => {
 						birthDate: faker.date.birthdate(),
 						birthPlace: faker.address.streetAddress(),
 						address: faker.address.streetAddress(),
-						photo: faker.image.people(259, 370, true),
+						photo: faker.image.people(200, 200, true),
 						gender: faker.name.gender(true) as Gender,
 					},
 				});
@@ -1878,7 +1878,7 @@ const lessonSeed = async () => {
 						birthDate: faker.date.birthdate(),
 						birthPlace: faker.address.streetAddress(),
 						address: faker.address.streetAddress(),
-						photo: faker.image.people(259, 370, true),
+						photo: faker.image.people(200, 200, true),
 						gender: faker.name.gender(true) as Gender,
 					},
 				});
@@ -1927,7 +1927,7 @@ const lessonSeed = async () => {
 						birthDate: faker.date.birthdate(),
 						birthPlace: faker.address.streetAddress(),
 						address: faker.address.streetAddress(),
-						photo: faker.image.people(259, 370, true),
+						photo: faker.image.people(200, 200, true),
 						gender: faker.name.gender(true) as Gender,
 					},
 				});
@@ -1976,7 +1976,7 @@ const lessonSeed = async () => {
 						birthDate: faker.date.birthdate(),
 						birthPlace: faker.address.streetAddress(),
 						address: faker.address.streetAddress(),
-						photo: faker.image.people(259, 370, true),
+						photo: faker.image.people(200, 200, true),
 						gender: faker.name.gender(true) as Gender,
 					},
 				});
@@ -2025,7 +2025,7 @@ const lessonSeed = async () => {
 						birthDate: faker.date.birthdate(),
 						birthPlace: faker.address.streetAddress(),
 						address: faker.address.streetAddress(),
-						photo: faker.image.people(259, 370, true),
+						photo: faker.image.people(200, 200, true),
 						gender: faker.name.gender(true) as Gender,
 					},
 				});
@@ -2074,7 +2074,7 @@ const lessonSeed = async () => {
 						birthDate: faker.date.birthdate(),
 						birthPlace: faker.address.streetAddress(),
 						address: faker.address.streetAddress(),
-						photo: faker.image.people(259, 370, true),
+						photo: faker.image.people(200, 200, true),
 						gender: faker.name.gender(true) as Gender,
 					},
 				});
@@ -2123,7 +2123,7 @@ const lessonSeed = async () => {
 						birthDate: faker.date.birthdate(),
 						birthPlace: faker.address.streetAddress(),
 						address: faker.address.streetAddress(),
-						photo: faker.image.people(259, 370, true),
+						photo: faker.image.people(200, 200, true),
 						gender: faker.name.gender(true) as Gender,
 					},
 				});
@@ -2172,7 +2172,7 @@ const lessonSeed = async () => {
 						birthDate: faker.date.birthdate(),
 						birthPlace: faker.address.streetAddress(),
 						address: faker.address.streetAddress(),
-						photo: faker.image.people(259, 370, true),
+						photo: faker.image.people(200, 200, true),
 						gender: faker.name.gender(true) as Gender,
 					},
 				});
@@ -2221,7 +2221,7 @@ const lessonSeed = async () => {
 						birthDate: faker.date.birthdate(),
 						birthPlace: faker.address.streetAddress(),
 						address: faker.address.streetAddress(),
-						photo: faker.image.people(259, 370, true),
+						photo: faker.image.people(200, 200, true),
 						gender: faker.name.gender(true) as Gender,
 					},
 				});
@@ -2270,7 +2270,7 @@ const lessonSeed = async () => {
 						birthDate: faker.date.birthdate(),
 						birthPlace: faker.address.streetAddress(),
 						address: faker.address.streetAddress(),
-						photo: faker.image.people(259, 370, true),
+						photo: faker.image.people(200, 200, true),
 						gender: faker.name.gender(true) as Gender,
 					},
 				});
@@ -2325,7 +2325,7 @@ const lessonSeed = async () => {
 						birthDate: faker.date.birthdate(),
 						birthPlace: faker.address.streetAddress(),
 						address: faker.address.streetAddress(),
-						photo: faker.image.people(259, 370, true),
+						photo: faker.image.people(200, 200, true),
 						gender: faker.name.gender(true) as Gender,
 					},
 				});
@@ -2374,7 +2374,7 @@ const lessonSeed = async () => {
 						birthDate: faker.date.birthdate(),
 						birthPlace: faker.address.streetAddress(),
 						address: faker.address.streetAddress(),
-						photo: faker.image.people(259, 370, true),
+						photo: faker.image.people(200, 200, true),
 						gender: faker.name.gender(true) as Gender,
 					},
 				});
@@ -2423,7 +2423,7 @@ const lessonSeed = async () => {
 						birthDate: faker.date.birthdate(),
 						birthPlace: faker.address.streetAddress(),
 						address: faker.address.streetAddress(),
-						photo: faker.image.people(259, 370, true),
+						photo: faker.image.people(200, 200, true),
 						gender: faker.name.gender(true) as Gender,
 					},
 				});
@@ -2472,7 +2472,7 @@ const lessonSeed = async () => {
 						birthDate: faker.date.birthdate(),
 						birthPlace: faker.address.streetAddress(),
 						address: faker.address.streetAddress(),
-						photo: faker.image.people(259, 370, true),
+						photo: faker.image.people(200, 200, true),
 						gender: faker.name.gender(true) as Gender,
 					},
 				});
@@ -2521,7 +2521,7 @@ const lessonSeed = async () => {
 						birthDate: faker.date.birthdate(),
 						birthPlace: faker.address.streetAddress(),
 						address: faker.address.streetAddress(),
-						photo: faker.image.people(259, 370, true),
+						photo: faker.image.people(200, 200, true),
 						gender: faker.name.gender(true) as Gender,
 					},
 				});
@@ -2570,7 +2570,7 @@ const lessonSeed = async () => {
 						birthDate: faker.date.birthdate(),
 						birthPlace: faker.address.streetAddress(),
 						address: faker.address.streetAddress(),
-						photo: faker.image.people(259, 370, true),
+						photo: faker.image.people(200, 200, true),
 						gender: faker.name.gender(true) as Gender,
 					},
 				});
@@ -2619,7 +2619,7 @@ const lessonSeed = async () => {
 						birthDate: faker.date.birthdate(),
 						birthPlace: faker.address.streetAddress(),
 						address: faker.address.streetAddress(),
-						photo: faker.image.people(259, 370, true),
+						photo: faker.image.people(200, 200, true),
 						gender: faker.name.gender(true) as Gender,
 					},
 				});
@@ -2668,7 +2668,7 @@ const lessonSeed = async () => {
 						birthDate: faker.date.birthdate(),
 						birthPlace: faker.address.streetAddress(),
 						address: faker.address.streetAddress(),
-						photo: faker.image.people(259, 370, true),
+						photo: faker.image.people(200, 200, true),
 						gender: faker.name.gender(true) as Gender,
 					},
 				});
@@ -2717,7 +2717,7 @@ const lessonSeed = async () => {
 						birthDate: faker.date.birthdate(),
 						birthPlace: faker.address.streetAddress(),
 						address: faker.address.streetAddress(),
-						photo: faker.image.people(259, 370, true),
+						photo: faker.image.people(200, 200, true),
 						gender: faker.name.gender(true) as Gender,
 					},
 				});
@@ -2766,7 +2766,7 @@ const lessonSeed = async () => {
 						birthDate: faker.date.birthdate(),
 						birthPlace: faker.address.streetAddress(),
 						address: faker.address.streetAddress(),
-						photo: faker.image.people(259, 370, true),
+						photo: faker.image.people(200, 200, true),
 						gender: faker.name.gender(true) as Gender,
 					},
 				});
@@ -2815,7 +2815,7 @@ const lessonSeed = async () => {
 						birthDate: faker.date.birthdate(),
 						birthPlace: faker.address.streetAddress(),
 						address: faker.address.streetAddress(),
-						photo: faker.image.people(259, 370, true),
+						photo: faker.image.people(200, 200, true),
 						gender: faker.name.gender(true) as Gender,
 					},
 				});
@@ -2895,7 +2895,7 @@ const categoryAndPost = async () => {
 									phone: faker.phone.number(),
 									createdAt: faker.date.past(),
 									emailVerified: true,
-									photo: faker.image.people(259, 370, true),
+									photo: faker.image.people(200, 200, true),
 									postComments: {
 										createMany: {
 											data: [
@@ -2944,7 +2944,7 @@ const adminSeed = async () => {
 			password: hashSync("danis3m3t", 10),
 			name: "Hamdani Ash-Sidiq",
 			phone: "087736690306",
-			photo: faker.image.people(259, 370, true),
+			photo: faker.image.people(200, 200, true),
 			emailVerified: true,
 		},
 	});
