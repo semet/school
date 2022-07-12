@@ -19,21 +19,18 @@ const MainMenu = () => {
 							</Link>
 						</li>
 						<li>
-							<a href="about.html">About</a>
+							<Link href="/about">
+								<a>Tentang</a>
+							</Link>
 						</li>
-						<li className="menu-item-has-children">
-							<a href="#0">Events</a>
-							<ul className="submenu">
-								<li>
-									<a href="events.html">Events</a>
-								</li>
-								<li>
-									<a href="events-single.html">Events Single</a>
-								</li>
-							</ul>
+						<li>
+							<Link href="/event">
+								<a>Events</a>
+							</Link>
 						</li>
+
 						<li className="menu-item-has-children">
-							<a href="#0">Programs</a>
+							<a href="#0">WArga Sekolah</a>
 							<ul className="submenu">
 								<li>
 									<a href="programs.html">Programs</a>

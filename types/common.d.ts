@@ -4,6 +4,7 @@ declare module "common" {
 		Category,
 		ClassRoom,
 		Department,
+		Headmaster,
 		Lesson,
 		Post,
 		PostComment,
@@ -23,6 +24,9 @@ declare module "common" {
 		specialProgram: SpecialProgram;
 	};
 
+	type HeadmasterWithDetails = Headmaster & {
+		department: Department;
+	};
 	type StudentWithDetails = Student & {
 		year: Year;
 		classRoom: ClassRoom;

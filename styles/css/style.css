@@ -1393,7 +1393,7 @@ img {
 }
 .faith-section .faith-content .nav .nav-item .nav-link {
 	width: 120px;
-	height: 120px;
+	height: 65px;
 	filter: drop-shadow(0 0 5px rgba(136, 136, 136, 0.2));
 	background-color: #fff;
 	display: flex;
@@ -1410,6 +1410,7 @@ img {
 }
 .faith-section .faith-content .nav .nav-item .nav-link.active {
 	border-color: #8dc63f;
+	color: #494a56;
 }
 
 .qoute-section {

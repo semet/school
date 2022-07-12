@@ -1,11 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-interface Props {
-	description: string;
-}
-
-const AboutSection: React.FC<Props> = ({ description }) => {
+const AboutSection = () => {
 	return (
 		<section className="about-section padding-tb shape-1">
 			<div className="container">
@@ -15,13 +11,23 @@ const AboutSection: React.FC<Props> = ({ description }) => {
 							<div className="lab-inner">
 								<div className="lab-content">
 									<div className="header-title text-start m-0">
-										<h5>Sejarah singkat Abu Darda</h5>
-										<h2 className="mb-0">Pondok Pesantren Abu Darda</h2>
+										<h5>About Our History</h5>
+										<h2 className="mb-0">
+											Islamic Center For Muslims To Achieve Spiritual Goals
+										</h2>
 									</div>
 									<h5 className="my-4">
 										Our Promise To Uphold The Trust Placed.
 									</h5>
-									<p style={{ textAlign: "justify" }}>{description}</p>
+									<p>
+										Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+										Modi molestias culpa reprehenderit delectus, ullam harum,
+										voluptatum numquam ati nesciunt odit quis corrupti magni
+										quam consequatur sint ipsum tecto exercitationem, illo
+										quisquam. Reprehenderit ut placeat cum adantium nam magnam
+										blanditiis sequi modi! Nesciunt, repudiandae eos eniam quod
+										maxime corrupti eligendi ea in animi.
+									</p>
 									<a href="#" className="lab-btn mt-4">
 										Ask About Islam <i className="icofont-heart-alt" />
 									</a>
