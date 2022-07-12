@@ -1,0 +1,351 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+   TEACHER
+   HEADMASTER
+}
+
+enum Gender{
+   Male
+   Female
+}
+
+model About {
+   id              Int @id @default(autoincrement())
+   builtDate       DateTime 
+   vision          String @db.Text
+   mission         String @db.Text
+   description     String @db.LongText
+   logo            String
+   createdAt       DateTime @default(now())
+   updatedAt       DateTime @updatedAt
+}
+
+model Year {
+   id              Int @id @default(autoincrement())
+   name            String
+   startAt         DateTime
+   endAt           DateTime
+   active          Boolean @default(true)
+   createdAt       DateTime @default(now())
+   updatedAt       DateTime @updatedAt 
+   semesters       Semester[]
+   students        Student[]
+}
+
+model Semester {
+   id              Int @id @default(autoincrement())
+   year            Year @relation(fields: [yearId], references: [id])
+   yearId          Int
+   name            String
+   startAt         DateTime
+   endAt           DateTime
+   active          Boolean @default(true)
+   createdAt       DateTime @default(now())
+   updatedAt       DateTime @updatedAt
+}
+
+model Department {
+   id              Int @id @default(autoincrement())
+   name            String
+   description     String @db.Text
+   createdAt       DateTime @default(now())
+   updatedAt       DateTime @updatedAt 
+   batches         Batch[]
+   teacher         Teacher[]
+   headmaster      Headmaster?
+}
+
+model Batch {
+   id              Int @id @default(autoincrement())
+   department      Department   @relation(fields: [departmentId], references: [id])
+   departmentId    Int
+   name            String
+   description     String @db.Text
+   createdAt       DateTime @default(now())
+   updatedAt       DateTime @updatedAt 
+   classRooms      ClassRoom[]
+   lesson          Lesson[]
+   teacher         Teacher[]
+}
+
+model ClassRoom {
+   id              Int @id @default(autoincrement())
+   batch           Batch   @relation(fields: [batchId], references: [id])
+   batchId         Int
+   name            String
+   description     String @db.Text
+   capacity        Int
+   createdAt       DateTime @default(now())
+   updatedAt       DateTime @updatedAt 
+   students        Student[]
+}
+
+model Student {
+   id              String @id @default(uuid())
+   year            Year   @relation(fields: [yearId], references: [id])
+   yearId          Int
+   classRoom       ClassRoom   @relation(fields: [classRoomId], references: [id])
+   classRoomId     Int
+   nis             String @unique
+   nisn            String @unique
+   name            String
+   email           String @unique
+   emailVerified   Boolean @default(false)
+   phone           String?
+   password        String
+   gender          Gender
+   birthDate       DateTime
+   birthPlace      String @db.Text
+   address         String
+   photo           String?
+   isAlumni        Boolean  @default(false)
+   createdAt       DateTime    @default(now())
+   updatedAt       DateTime    @updatedAt
+
+   parent          Parent?   
+}
+
+model Parent {
+   id              String @id @default(uuid())
+   student         Student  @relation(fields: [studentId], references: [id])
+   studentId       String   @unique
+   name            String
+   email           String @unique
+   emailVerified   Boolean @default(false)
+   phone           String
+   password        String
+   address         String
+   photo           String?
+   createdAt       DateTime    @default(now())
+   updatedAt       DateTime    @updatedAt
+}
+
+model Lesson {
+   id              String @id @default(uuid())
+   batch           Batch   @relation(fields: [batchId], references: [id])
+   batchId         Int
+   code            String
+   name            String
+   description     String? @db.Text
+   createdAt       DateTime @default(now())
+   updatedAt       DateTime @updatedAt
+
+   teacher         Teacher[]
+}
+
+model Teacher {
+   id              String @id @default(uuid())
+   department      Department   @relation(fields: [departmentId], references: [id])
+   departmentId    Int
+   batch           Batch   @relation(fields: [batchId], references: [id])
+   batchId         Int
+   lesson          Lesson   @relation(fields: [lessonId], references: [id])
+   lessonId        String
+   nip             String @unique
+   nuptk           String @unique
+   name            String
+   email           String @unique
+   emailVerified   Boolean @default(false)
+   phone           String @unique
+   password        String
+   gender          Gender
+   role            Role     @default(TEACHER)
+   birthDate       DateTime
+   birthPlace      String
+   address         String @db.Text
+   photo           String?
+   createdAt       DateTime @default(now())
+   updatedAt       DateTime @updatedAt
+   specialProgram  SpecialProgram?
+}
+
+model Headmaster {
+   id              String @id @default(uuid())
+   department      Department   @relation(fields: [departmentId], references: [id])
+   departmentId    Int @unique
+   nip             String @unique
+   nuptk           String @unique
+   name            String
+   email           String @unique
+   emailVerified   Boolean @default(false)
+   phone           String @unique
+   password        String
+   gender          Gender
+   role            Role     @default(HEADMASTER)
+   birthDate       DateTime
+   birthPlace      String
+   address         String @db.Text
+   photo           String?
+   createdAt       DateTime @default(now())
+   updatedAt       DateTime @updatedAt
+}
+
+model SpecialProgram {
+   id              String @id @default(uuid())
+   teacher         Teacher   @relation(fields: [teacherId], references: [id])
+   teacherId       String @unique
+   name            String
+   description     String? @db.Text
+   createdAt       DateTime @default(now())
+   updatedAt       DateTime @updatedAt
+}
+
+model Psb {
+   id              String @id @default(uuid())
+   name            String
+   description     String? @db.Text
+   isActive        Boolean @default(true)
+   createdAt       DateTime @default(now())
+   updatedAt       DateTime @updatedAt
+
+   applicants       Applicant[]
+}
+
+model Applicant {
+   id                   String @id @default(uuid())
+   psb                  Psb   @relation(fields: [psbId], references: [id])
+   psbId                String
+   selectedDepartment   Int
+   name                 String
+   email                String @unique
+   emailVerified        Boolean @default(false)
+   phone                String @unique
+   password             String
+   gender               Gender
+   birthDate            DateTime
+   birthPlace           String
+   address              String @db.Text
+   photo                String
+   approved             Boolean @default(false)
+   createdAt            DateTime @default(now())
+   updatedAt            DateTime @updatedAt
+
+   documents       ApplicantDocument[]
+}
+
+model ApplicantDocument {
+   id              Int @id @default(autoincrement())
+   applicant       Applicant   @relation(fields: [applicantId], references: [id])
+   applicantId     String
+   name            String
+   description     String? @db.Text
+   createdAt       DateTime @default(now())
+   updatedAt       DateTime @updatedAt
+}
+
+model Category {
+   id              Int @id @default(autoincrement())
+   name            String
+   slug            String @unique
+   description     String? @db.Text
+   createdAt       DateTime @default(now())
+   updatedAt       DateTime @updatedAt
+
+   posts           Post[]
+}
+
+model Post {
+   id              String @id @default(uuid())
+   category        Category   @relation(fields: [categoryId], references: [id])
+   categoryId      Int
+   slug            String @unique
+   title           String
+   body            String? @db.LongText
+   createdAt       DateTime @default(now())
+   updatedAt       DateTime @updatedAt
+   images          PostImage[]
+   comments        PostComment[]
+}
+
+model PostImage {
+   id              String @id @default(uuid())
+   post            Post   @relation(fields: [postId], references: [id])
+   postId          String
+   title           String
+   createdAt       DateTime @default(now())
+   updatedAt       DateTime @updatedAt
+}
+
+model User {
+   id              String @id @default(uuid())
+   name            String
+   email           String @unique
+   emailVerified   Boolean @default(true)
+   phone           String @unique
+   password        String
+   birthDate       DateTime
+   birthPlace      String
+   address         String @db.Text
+   photo           String?
+   createdAt       DateTime @default(now())
+   updatedAt       DateTime @updatedAt
+
+   postComments    PostComment[]
+}
+
+model PostComment {
+   id              String @id @default(uuid())
+   post            Post   @relation(fields: [postId], references: [id])
+   postId          String
+   user            User   @relation(fields: [userId], references: [id])
+   userId          String  
+   comment         String? @db.LongText
+   createdAt       DateTime @default(now())
+   updatedAt       DateTime @updatedAt
+}
+
+model Gallery {
+   id              String @id @default(uuid())
+   name            String
+   description     String? @db.Text
+   createdAt       DateTime @default(now())
+   updatedAt       DateTime @updatedAt
+
+   images          GalleryImage[]
+}
+
+model GalleryImage{
+   id              String @id @default(uuid())
+   gallery         Gallery   @relation(fields: [galleryId], references: [id])
+   galleryId       String
+   caption         String
+   createdAt       DateTime @default(now())
+   updatedAt       DateTime @updatedAt
+}
+
+model Event {
+   id              String @id @default(uuid())
+   name            String
+   description     String @db.Text
+   startDate       DateTime
+   endDate         DateTime
+   location        String
+   createdAt       DateTime @default(now())
+   updatedAt       DateTime @updatedAt
+}
+
+model Admin {
+   id              String @id @default(uuid())
+   name            String
+   email           String @unique
+   emailVerified   Boolean @default(false)
+   phone           String @unique
+   password        String
+   birthDate       DateTime
+   birthPlace      String
+   address         String @db.Text
+   photo           String?
+   createdAt       DateTime @default(now())
+   updatedAt       DateTime @updatedAt
+}
