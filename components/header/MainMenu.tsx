@@ -33,12 +33,14 @@ const MainMenu = () => {
 							<a href="#">Warga Sekolah</a>
 							<ul className="submenu">
 								<li>
-									<Link href="/teacher ">
+									<Link href="/teacher">
 										<a>Guru</a>
 									</Link>
 								</li>
 								<li>
-									<a href="program-single.html">Siswa</a>
+									<Link href="/student">
+										<a>Siswa</a>
+									</Link>
 								</li>
 								<li>
 									<a href="program-single.html">Alumni</a>
