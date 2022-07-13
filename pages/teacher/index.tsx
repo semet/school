@@ -16,7 +16,7 @@ const TeacherPage: NextPageWithLayout<Props> = ({ teachers }) => {
 	const [data, setData] = useState<TeacherWithDetails[]>(teachers.slice(0, 12));
 	const [sliceAmount, setSliceAmount] = useState(12);
 	// get all the teacher and limit by 10 and return the data
-	const paginate = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+	const loadMore = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
 		e.preventDefault();
 		teachers
 			.slice(sliceAmount, 12 + data.length)
@@ -49,7 +49,7 @@ const TeacherPage: NextPageWithLayout<Props> = ({ teachers }) => {
 								))}
 							</div>
 							<div className="d-flex justify-content-center">
-								<a href="#" className="lab-btn" onClick={(e) => paginate(e)}>
+								<a href="#" className="lab-btn" onClick={(e) => loadMore(e)}>
 									load more ...
 								</a>
 							</div>
