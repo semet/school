@@ -43,7 +43,9 @@ const MainMenu = () => {
 									</Link>
 								</li>
 								<li>
-									<a href="program-single.html">Alumni</a>
+									<Link href="/alumni">
+										<a>Alumni</a>
+									</Link>
 								</li>
 							</ul>
 						</li>
@@ -58,13 +60,10 @@ const MainMenu = () => {
 								</li>
 							</ul>
 						</li>
-						<li className="menu-item-has-children">
-							<a href="#">Blog</a>
-							<ul className="submenu">
-								<li>
-									<a href="gallery.html">Gallery</a>
-								</li>
-							</ul>
+						<li>
+							<Link href="/about">
+								<a>Blog</a>
+							</Link>
 						</li>
 					</ul>
 					<div className="prayer-time d-none d-lg-block">

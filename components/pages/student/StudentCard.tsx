@@ -16,8 +16,8 @@ const StudentCard: React.FC<Props> = ({ student }) => {
 						<img src="/images/team/02.jpg" className="card-img-top" alt="product" />
 					</div>
 					<div className="lab-content">
-						<Link href={`/student/${student.id}`}>
-							<a href="#">
+						<Link href={`/alumni/${student.id}`}>
+							<a>
 								<h6 className="card-title mb-0">{student.name}</h6>
 							</a>
 						</Link>
