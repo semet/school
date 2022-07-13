@@ -44,32 +44,32 @@ const Teacher: NextPageWithLayout<Props> = ({ teacher }) => {
 									<div className="scholar-right">
 										<div className="scholar-intro">
 											<h5>{teacher.name}</h5>
-											<span className="d-inline-block">
+											<span className="d-inline-block mt-2">
 												({teacher.nip}) {teacher.lesson.name}
 											</span>
 										</div>
 										<div className="scholar-info">
 											<div className="scholar-other-info">
 												<ul className="lab-ul mt-4">
-													<li>
+													<li className="my-4">
 														<span className="info-title">NUPTK </span>
 														<span className="info-details">
 															: {teacher.nuptk}
 														</span>
 													</li>
-													<li>
+													<li className="my-4">
 														<span className="info-title">Email </span>
 														<span className="info-details">
 															: {teacher.email}
 														</span>
 													</li>
-													<li>
+													<li className="my-4">
 														<span className="info-title">Phone </span>
 														<span className="info-details">
 															: {teacher.phone}
 														</span>
 													</li>
-													<li>
+													<li className="my-4">
 														<span className="info-title">
 															Tanggal Lahir
 														</span>
@@ -77,13 +77,13 @@ const Teacher: NextPageWithLayout<Props> = ({ teacher }) => {
 															: {formatDate(teacher.birthDate, "fullDate")}
 														</span>
 													</li>
-													<li>
+													<li className="my-4">
 														<span className="info-title">Tempat Lahir</span>
 														<span className="info-details">
 															: {teacher.birthPlace}
 														</span>
 													</li>
-													<li>
+													<li className="my-4">
 														<span className="info-title">Alamat </span>
 														<span className="info-details">
 															: {teacher.address}
