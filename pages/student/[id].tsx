@@ -6,6 +6,7 @@ import Head from "next/head";
 import { GetStaticPaths, GetStaticProps, NextPageWithLayout } from "next";
 import MainLayout from "../../components/layouts/MainLayout";
 import { prisma } from "../../prisma/db";
+import formatDate from "dateformat";
 
 interface Props {
 	student: StudentWithDetails;
@@ -42,15 +43,59 @@ const Student: NextPageWithLayout<Props> = ({ student }) => {
 									<div className="scholar-right">
 										<div className="scholar-intro">
 											<h5>{student.name}</h5>
-											<span className="d-inline-block">{student.nisn}</span>
+											<span className="d-inline-block mt-2">
+												{student.nisn}
+											</span>
 										</div>
 										<div className="scholar-info">
 											<div className="scholar-other-info">
 												<ul className="lab-ul mt-4">
-													<li>
+													<li className="my-4">
 														<span className="info-title">NIS </span>
 														<span className="info-details">
 															: {student.nis}
+														</span>
+													</li>
+													<li className="my-4">
+														<span className="info-title">Email </span>
+														<span className="info-details">
+															: {student.email}
+														</span>
+													</li>
+													<li className="my-4">
+														<span className="info-title">
+															Phone Number{" "}
+														</span>
+														<span className="info-details">
+															: {student.phone}
+														</span>
+													</li>
+													<li className="my-4">
+														<span className="info-title">
+															Jenis Kelamin
+														</span>
+														<span className="info-details">
+															: {student.gender}
+														</span>
+													</li>
+													<li className="my-4">
+														<span className="info-title">
+															Tanggal Lahir
+														</span>
+														<span className="info-details">
+															: {formatDate(student.birthDate, "fullDate")}
+														</span>
+													</li>
+													<li className="my-4">
+														<span className="info-title">Tempat Lahir</span>
+														<span className="info-details">
+															: {student.birthPlace}
+														</span>
+													</li>
+													<li className="my-4">
+														<span className="info-title">Alamat</span>
+														<span className="info-details">
+															: {student.address}
 														</span>
 													</li>
 												</ul>

@@ -30,7 +30,7 @@ const MainMenu = () => {
 						</li>
 
 						<li className="menu-item-has-children">
-							<a href="#">Warga Sekolah</a>
+							<a href="#">Direktori</a>
 							<ul className="submenu">
 								<li>
 									<Link href="/teacher">
@@ -48,55 +48,23 @@ const MainMenu = () => {
 							</ul>
 						</li>
 						<li className="menu-item-has-children">
-							<a href="#0">Pages</a>
+							<a href="#">Pages</a>
 							<ul className="submenu">
 								<li>
 									<a href="gallery.html">Gallery</a>
 								</li>
 								<li>
-									<a href="#0">Scholars</a>
-									<ul className="submenu">
-										<li>
-											<a href="scholar.html">Our Scholars</a>
-										</li>
-										<li>
-											<a href="scholar-single.html">Scholar Single</a>
-										</li>
-									</ul>
-								</li>
-								<li>
-									<a href="#0">Blog</a>
-									<ul className="submenu">
-										<li>
-											<a href="blog.html">blog</a>
-										</li>
-										<li>
-											<a href="blog-single.html">Blog Single</a>
-										</li>
-									</ul>
-								</li>
-								<li>
-									<a href="sermons.html">Sermons</a>
-								</li>
-								<li>
-									<a href="services.html">Service</a>
-								</li>
-								<li>
-									<a href="404.html">404 Error</a>
-								</li>
-								<li>
-									<a href="coming-soon.html">Coming-soon</a>
-								</li>
-								<li>
-									<a href="registration.html">Registration</a>
-								</li>
-								<li>
-									<a href="login.html">Login</a>
+									<a href="gallery.html">Contact</a>
 								</li>
 							</ul>
 						</li>
-						<li>
-							<a href="contact.html">Contact</a>
+						<li className="menu-item-has-children">
+							<a href="#">Blog</a>
+							<ul className="submenu">
+								<li>
+									<a href="gallery.html">Gallery</a>
+								</li>
+							</ul>
 						</li>
 					</ul>
 					<div className="prayer-time d-none d-lg-block">
