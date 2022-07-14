@@ -35,7 +35,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 		const data = dep?.batches.flatMap((batch) =>
 			batch.classRooms.flatMap((classRoom) => classRoom.students)
 		);
-		console.log(data);
 		res.status(200).json({ students: data });
 		res.end();
 	} catch (err) {
