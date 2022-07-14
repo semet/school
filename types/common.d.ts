@@ -32,6 +32,11 @@ declare module "common" {
 		classRoom: ClassRoom;
 	};
 
+	type CategoryWithDetails = Category & {
+		posts: Post[];
+		_count: Prisma.CategoryCountOutputType;
+	};
+
 	type PostWithDetails = Post & {
 		category: Category;
 		comments: PostComment[];
