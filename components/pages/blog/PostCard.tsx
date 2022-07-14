@@ -1,6 +1,8 @@
 import { PostWithDetails } from "common";
 import Image from "next/image";
 import React from "react";
+import formatDate from "dateformat";
+import Link from "next/link";
 
 interface Props {
 	post: PostWithDetails;
@@ -16,37 +18,42 @@ const PostCard: React.FC<Props> = ({ post }) => {
 					</a>
 				</div>
 				<div className="post-content">
-					<a href="blog-single.html">
-						<h3>Continually proactive services</h3>
-					</a>
+					<Link href={`/blog/${post.slug}`}>
+						<a>
+							<h3>{post.title}</h3>
+						</a>
+					</Link>
 					<ul className="lab-ul post-date">
 						<li>
 							<span>
-								<i className="icofont-ui-calendar"></i> October 9, 2019 10:59 am
+								<i className="icofont-ui-calendar"></i>{" "}
+								{formatDate(post.createdAt, "fullDate")}
 							</span>
 						</li>
 						<li>
 							<span>
 								<i className="icofont-user"></i>
-								<a href="#">Robot Smith</a>
+								<a href="#">Admin</a>
 							</span>
 						</li>
 						<li>
 							<span>
 								<i className="icofont-speech-comments"></i>
-								<a href="#">09 Comments</a>
+								<a href="#">{post._count.comments} Komentar</a>
 							</span>
 						</li>
 					</ul>
-					<p>
-						It’s no secret that the digital industry is booming. from exciting
-						startups to global brands, to the new companies are reachin
-						boomingesagencies, responding to the new psblites available. however,
-						the industry is exciting fast becoming overcr.
+					<p
+						style={{
+							margin: 0,
+							textAlign: "justify",
+						}}
+					>
+						{post.body?.slice(0, 350)} &#8594;
 					</p>
-					<a href="#" className="lab-btn">
-						Read More
-					</a>
+					<Link href={`/blog/${post.slug}`}>
+						<a className="lab-btn mt-2">Read More</a>
+					</Link>
 				</div>
 			</div>
 		</div>
