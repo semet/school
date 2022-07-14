@@ -35,7 +35,7 @@ const AppFooter = () => {
 										/>
 									</div>
 									<div className="lab-content">
-										<span>Email : admin@Hafsa.com</span>
+										<span>Email : abudardalombok@gmail.com</span>
 									</div>
 								</div>
 							</div>
@@ -50,7 +50,7 @@ const AppFooter = () => {
 										/>
 									</div>
 									<div className="lab-content">
-										<span>Address : 30 North West New York 240</span>
+										<span>Address : Balen Gagk</span>
 									</div>
 								</div>
 							</div>
