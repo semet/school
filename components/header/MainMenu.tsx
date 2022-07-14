@@ -61,7 +61,7 @@ const MainMenu = () => {
 							</ul>
 						</li>
 						<li>
-							<Link href="/about">
+							<Link href="/blog/all-posts">
 								<a>Blog</a>
 							</Link>
 						</li>
