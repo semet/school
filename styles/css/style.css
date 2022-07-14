@@ -2498,6 +2498,10 @@ img {
 .paginations {
 	margin: 40px 0;
 }
+.pagination-link-disabled {
+	pointer-events: none;
+	cursor: not-allowed;
+}
 @media (min-width: 992px) {
 	.paginations {
 		margin-bottom: 10px;
