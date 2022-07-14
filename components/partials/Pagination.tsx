@@ -47,7 +47,6 @@ const Pagination: React.FC<Props> = (props) => {
 
 	return (
 		<div className="paginations">
-			&#8230;
 			<ul className="lab-ul d-flex flex-wrap justify-content-center mb-1">
 				<li>
 					<a
