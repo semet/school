@@ -1,14 +1,29 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useListener } from "react-bus";
+import { getWindowSize } from "../../utils/windowSize";
 
 const HeaderTop = () => {
 	const headerRef = useRef<HTMLDivElement>(null);
-	const [isShow, setIsShow] = useState("none");
-
+	const [isShow, setIsShow] = useState("");
+	const [windowSize, setWindowSize] = useState(0);
 	useListener("ellepsisToggled", () => {
 		headerRef.current?.classList.toggle("open");
 		isShow === "none" ? setIsShow("block") : setIsShow("none");
 	});
+
+	useEffect(() => {
+		const { innerWidth } = window;
+
+		const handleWindowResize = () => {
+			setWindowSize(innerWidth);
+		};
+		window.addEventListener("resize", handleWindowResize);
+		windowSize >= 990 ? setIsShow("block") : setIsShow("none");
+
+		return () => {
+			window.removeEventListener("resize", handleWindowResize);
+		};
+	}, [windowSize]);
 	return (
 		<div className="header-top open" style={{ display: `${isShow}` }} ref={headerRef}>
 			<div className="header-top-area">
