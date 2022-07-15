@@ -1,7 +1,9 @@
 import { useFormik } from "formik";
-import React from "react";
+import React, { Fragment } from "react";
 import * as Yup from "yup";
 import { useBus } from "react-bus";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/router";
 
 interface Props {
 	postId: string;
@@ -9,6 +11,10 @@ interface Props {
 
 const CommentForm: React.FC<Props> = ({ postId }) => {
 	const bus = useBus();
+
+	const { status } = useSession();
+
+	const router = useRouter();
 
 	const formik = useFormik({
 		initialValues: {
@@ -36,33 +42,50 @@ const CommentForm: React.FC<Props> = ({ postId }) => {
 	});
 	return (
 		<div id="respond" className="comment-respond bg-white">
-			<h6 className="h7">Leave a Comment</h6>
-			<div className="add-comment">
-				<form
-					onSubmit={formik.handleSubmit}
-					id="commentform"
-					className="comment-form"
-				>
-					<textarea
-						id="comment"
-						name="comment"
-						rows={7}
-						placeholder="Type Here Your Comment*"
-						onChange={formik.handleChange}
-						onBlur={formik.handleBlur}
-						value={formik.values.comment}
-						className={`form-control ${
-							formik.touched.comment && formik.errors.comment ? "is-invalid" : ""
-						}`}
-					/>
-					{formik.touched.comment && formik.errors.comment ? (
-						<div className="invalid-feedback">{formik.errors.comment}</div>
-					) : null}
-					<button type="submit" className="lab-btn">
-						<span>Send Comment</span>
-					</button>
-				</form>
-			</div>
+			{status === "unauthenticated" || status === "loading" ? (
+				<h6 className="h7">
+					<a
+						href="#"
+						onClick={() => router.push("/auth/login")}
+						className="text-danger"
+					>
+						Login
+					</a>{" "}
+					to leave Comment
+				</h6>
+			) : (
+				<Fragment>
+					<h6 className="h7">Leave a Comment</h6>
+					<div className="add-comment">
+						<form
+							onSubmit={formik.handleSubmit}
+							id="commentform"
+							className="comment-form"
+						>
+							<textarea
+								id="comment"
+								name="comment"
+								rows={7}
+								placeholder="Type Here Your Comment*"
+								onChange={formik.handleChange}
+								onBlur={formik.handleBlur}
+								value={formik.values.comment}
+								className={`form-control ${
+									formik.touched.comment && formik.errors.comment
+										? "is-invalid"
+										: ""
+								}`}
+							/>
+							{formik.touched.comment && formik.errors.comment ? (
+								<div className="invalid-feedback">{formik.errors.comment}</div>
+							) : null}
+							<button type="submit" className="lab-btn">
+								<span>Send Comment</span>
+							</button>
+						</form>
+					</div>
+				</Fragment>
+			)}
 		</div>
 	);
 };
