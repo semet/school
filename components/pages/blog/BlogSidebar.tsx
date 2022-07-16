@@ -17,7 +17,7 @@ const BlogSidebar = () => {
 			<WidgetRecentPosts />
 
 			{/* Archive */}
-			<WidgetArchive />
+			{/* <WidgetArchive /> */}
 
 			{/* Tag */}
 		</aside>
