@@ -2964,6 +2964,33 @@ const evetSeeder = async () => {
 	}
 };
 
+const gallerySeeder = async () => {
+	for (let i = 0; i < 5; i++) {
+		await prisma.gallery
+			.create({
+				data: {
+					name: faker.lorem.words(2),
+					description: faker.lorem.paragraph(),
+				},
+			})
+			.then(async (gallery) => {
+				for (let i = 0; i < 10; i++) {
+					await prisma.galleryImage.create({
+						data: {
+							caption: faker.lorem.sentence(),
+							url: faker.image.imageUrl(380, 330),
+							gallery: {
+								connect: {
+									id: gallery.id,
+								},
+							},
+						},
+					});
+				}
+			});
+	}
+};
+
 aboutSeed()
 	.then(() => yearSeed())
 	.then(() => departmentSeed())
@@ -2972,6 +2999,7 @@ aboutSeed()
 	.then(() => psb())
 	.then(() => adminSeed())
 	.then(() => evetSeeder())
+	.then(() => gallerySeeder())
 
 	.catch((e) => {
 		console.error(e);
