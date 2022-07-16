@@ -4,28 +4,19 @@ import { getWindowSize } from "../../utils/windowSize";
 
 const HeaderTop = () => {
 	const headerRef = useRef<HTMLDivElement>(null);
-	const [isShow, setIsShow] = useState("");
 	const [windowSize, setWindowSize] = useState(0);
+	const [isShow, setIsShow] = useState(
+		headerRef.current?.classList.contains("open") ? "block" : "none"
+	);
 	useListener("ellepsisToggled", () => {
 		headerRef.current?.classList.toggle("open");
-		isShow === "none" ? setIsShow("block") : setIsShow("none");
+		headerRef.current?.classList.contains("open")
+			? (headerRef.current!.style.display = "block")
+			: (headerRef.current!.style.display = "none");
 	});
 
-	useEffect(() => {
-		const { innerWidth } = window;
-
-		const handleWindowResize = () => {
-			setWindowSize(innerWidth);
-		};
-		window.addEventListener("resize", handleWindowResize);
-		windowSize >= 990 ? setIsShow("block") : setIsShow("none");
-
-		return () => {
-			window.removeEventListener("resize", handleWindowResize);
-		};
-	}, [windowSize]);
 	return (
-		<div className="header-top open" style={{ display: `${isShow}` }} ref={headerRef}>
+		<div className="header-top" ref={headerRef}>
 			<div className="header-top-area">
 				<ul className="left lab-ul">
 					<li>
