@@ -52,9 +52,12 @@ const MainMenu = () => {
 							</ul>
 						</li>
 						<li>
-							<Link href="/blog/all-posts">
-								<a>Gallery</a>
-							</Link>
+							<a
+								href="https://www.facebook.com/mts.abudarda.35/photos"
+								target="blank"
+							>
+								Gallery
+							</a>
 						</li>
 						<li>
 							<Link href="/blog/all-posts">
