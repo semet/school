@@ -24,13 +24,13 @@ const HeaderTop = () => {
 						<span>+800-123-4567 6587</span>
 					</li>
 					<li>
-						<i className="fas fa-map-marker-alt" /> Beverley, New York 224 US
+						<i className="fas fa-map-marker-alt" /> Balen Gagak
 					</li>
 				</ul>
 				<ul className="social-icons lab-ul d-flex">
 					<li>
 						<a href="#">
-							<i className="fab fa-facebook-messenger" />
+							<i className="fab fa-facebook" />
 						</a>
 					</li>
 					<li>
@@ -40,17 +40,7 @@ const HeaderTop = () => {
 					</li>
 					<li>
 						<a href="#">
-							<i className="fab fa-vimeo-v" />
-						</a>
-					</li>
-					<li>
-						<a href="#">
 							<i className="fab fa-skype" />
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<i className="fas fa-wifi" />
 						</a>
 					</li>
 				</ul>
