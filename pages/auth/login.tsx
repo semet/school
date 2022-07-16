@@ -12,6 +12,7 @@ import { useRouter } from "next/router";
 import MainLayout from "../../components/layouts/MainLayout";
 import Head from "next/head";
 import PageHeader from "../../components/partials/PageHeader";
+import { toast } from "react-toastify";
 
 const Login = ({
 	providers,
@@ -32,9 +33,9 @@ const Login = ({
 			if (res!.ok) {
 				router.push("/");
 			} else {
-				// toast.error("Credentials not match our record", {
-				// 	theme: "colored",
-				// });
+				toast.error("Credentials not match our record", {
+					theme: "colored",
+				});
 				console.log(res);
 			}
 		});

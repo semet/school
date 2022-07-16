@@ -8,24 +8,24 @@ type Data = {
 };
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
-	// const session = await getSession({ req });
-	// if (session === null) {
-	// 	res.status(401).json({
-	// 		error: "You are not authorized to perform this action",
-	// 	});
-	// 	return;
-	// }
+	const session = await getSession({ req });
+	if (session === null) {
+		res.status(401).json({
+			error: "You are not authorized to perform this action",
+		});
+		return;
+	}
 	if (req.method === "POST") {
 		try {
 			const { comment, postId } = req.body;
-			// const user = await prisma.user.findUnique({
-			// 	where: {
-			// 		email: session?.user?.email as string,
-			// 	},
-			// 	select: {
-			// 		id: true,
-			// 	},
-			// });
+			const user = await prisma.user.findUnique({
+				where: {
+					email: session?.user?.email as string,
+				},
+				select: {
+					id: true,
+				},
+			});
 			await prisma.postComment.create({
 				data: {
 					comment: comment,
