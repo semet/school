@@ -7131,6 +7131,13 @@ footer .footer-bottom .footer-bottom-content p a {
 	font-weight: 700;
 }
 
+.alert-psb {
+	height: 50px;
+	background-color: #051639;
+	position: relative;
+	z-index: -1;
+}
+
 /*Footer section End here*/
 
 /*# sourceMappingURL=style.css.map */
