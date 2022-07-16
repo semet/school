@@ -4,6 +4,8 @@ declare module "common" {
 		Category,
 		ClassRoom,
 		Department,
+		Gallery,
+		GalleryImage,
 		Headmaster,
 		Lesson,
 		Post,
@@ -46,5 +48,9 @@ declare module "common" {
 
 	type PostCommentWithDetails = PostComment & {
 		user: User;
+	};
+
+	type GalleryWithImages = Gallery & {
+		images: GalleryImage[];
 	};
 }
