@@ -1,14 +1,42 @@
 import { useSession, signOut } from "next-auth/react";
 import Link from "next/link";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { useListener } from "react-bus";
 
 const MainMenu = () => {
 	const { status } = useSession();
 	const menuRef = useRef<HTMLUListElement>(null);
+	const directoryRef = useRef<HTMLLIElement>(null);
+	const userRef = useRef<HTMLLIElement>(null);
 	useListener("menuToggled", () => {
 		menuRef.current?.classList.toggle("active");
 	});
+
+	const toggleDirectoryDropDown = (
+		e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+	) => {
+		e.preventDefault();
+		userRef.current?.classList.remove("open");
+		(userRef.current!.children[1] as HTMLUListElement).style.display = "none";
+		directoryRef.current?.classList.toggle("open");
+		directoryRef.current?.classList.contains("open")
+			? ((directoryRef.current!.children[1] as HTMLUListElement).style.display =
+					"block")
+			: ((directoryRef.current!.children[1] as HTMLUListElement).style.display =
+					"none");
+	};
+	const toggleUserDropDown = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+		e.preventDefault();
+		if (status === "authenticated" || status !== "loading") {
+			directoryRef.current?.classList.remove("open");
+			(directoryRef.current!.children[1] as HTMLUListElement).style.display = "none";
+			userRef.current?.classList.toggle("open");
+			userRef.current?.classList.contains("open")
+				? ((userRef.current!.children[1] as HTMLUListElement).style.display = "block")
+				: ((userRef.current!.children[1] as HTMLUListElement).style.display = "none");
+		}
+	};
+	useEffect(() => {});
 
 	return (
 		<div className="header-bottom">
@@ -31,9 +59,11 @@ const MainMenu = () => {
 							</Link>
 						</li>
 
-						<li className="menu-item-has-children">
-							<a href="#">Direktori</a>
-							<ul className="submenu">
+						<li className="menu-item-has-children" ref={directoryRef}>
+							<a href="#" onClick={(e) => toggleDirectoryDropDown(e)}>
+								Direktori
+							</a>
+							<ul className="submenu ">
 								<li>
 									<Link href="/teacher">
 										<a>Guru</a>
@@ -59,6 +89,7 @@ const MainMenu = () => {
 								Gallery
 							</a>
 						</li>
+
 						<li>
 							<Link href="/blog/all-posts">
 								<a>Blog</a>
@@ -76,8 +107,10 @@ const MainMenu = () => {
 								</Link>
 							</li>
 						) : (
-							<li className="menu-item-has-children">
-								<a href="#">User</a>
+							<li className="menu-item-has-children" ref={userRef}>
+								<a href="#" onClick={(e) => toggleUserDropDown(e)}>
+									User
+								</a>
 								<ul className="submenu">
 									<li>
 										<a href="gallery.html">Profile</a>
