@@ -25,10 +25,10 @@ const TeacherPage: NextPageWithLayout<Props> = ({ teachers }) => {
 		setSliceAmount(sliceAmount + 12);
 	};
 
-	useEffect(() => {
-		console.log(data);
-		console.log(teachers.length - data.length > 0);
-	});
+	// useEffect(() => {
+	// 	console.log(data);
+	// 	console.log(teachers.length - data.length > 0);
+	// });
 
 	return (
 		<Fragment>

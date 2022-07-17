@@ -1,10 +1,11 @@
 import { useSession, signOut } from "next-auth/react";
 import Link from "next/link";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useListener } from "react-bus";
 
 const MainMenu = () => {
 	const { status } = useSession();
+	const [mobileState, setMobileState] = useState(false);
 	const menuRef = useRef<HTMLUListElement>(null);
 	const directoryRef = useRef<HTMLLIElement>(null);
 	const userRef = useRef<HTMLLIElement>(null);
@@ -16,27 +17,39 @@ const MainMenu = () => {
 		e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
 	) => {
 		e.preventDefault();
-		userRef.current?.classList.remove("open");
-		(userRef.current!.children[1] as HTMLUListElement).style.display = "none";
-		directoryRef.current?.classList.toggle("open");
-		directoryRef.current?.classList.contains("open")
-			? ((directoryRef.current!.children[1] as HTMLUListElement).style.display =
-					"block")
-			: ((directoryRef.current!.children[1] as HTMLUListElement).style.display =
-					"none");
+		if (mobileState) {
+			userRef.current?.classList.remove("open");
+			(userRef.current!.children[1] as HTMLUListElement).style.display = "none";
+			directoryRef.current?.classList.toggle("open");
+			directoryRef.current?.classList.contains("open")
+				? ((directoryRef.current!.children[1] as HTMLUListElement).style.display =
+						"block")
+				: ((directoryRef.current!.children[1] as HTMLUListElement).style.display =
+						"none");
+		}
 	};
 	const toggleUserDropDown = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
 		e.preventDefault();
-		if (status === "authenticated" || status !== "loading") {
-			directoryRef.current?.classList.remove("open");
-			(directoryRef.current!.children[1] as HTMLUListElement).style.display = "none";
-			userRef.current?.classList.toggle("open");
-			userRef.current?.classList.contains("open")
-				? ((userRef.current!.children[1] as HTMLUListElement).style.display = "block")
-				: ((userRef.current!.children[1] as HTMLUListElement).style.display = "none");
+		if (mobileState) {
+			if (status === "authenticated" || status !== "loading") {
+				directoryRef.current?.classList.remove("open");
+				(directoryRef.current!.children[1] as HTMLUListElement).style.display =
+					"none";
+				userRef.current?.classList.toggle("open");
+				userRef.current?.classList.contains("open")
+					? ((userRef.current!.children[1] as HTMLUListElement).style.display =
+							"block")
+					: ((userRef.current!.children[1] as HTMLUListElement).style.display =
+							"none");
+			}
 		}
 	};
-	useEffect(() => {});
+	useEffect(() => {
+		if (window.innerWidth >= 990) {
+			setMobileState(true);
+		}
+		return () => setMobileState(false);
+	}, []);
 
 	return (
 		<div className="header-bottom">
