@@ -15,6 +15,28 @@ const HeaderTop = () => {
 			: (headerRef.current!.style.display = "none");
 	});
 
+	useEffect(() => {
+		const resizeHandler = () => {
+			if (window.innerWidth >= 990) {
+				if (!headerRef.current?.classList.contains("open")) {
+					headerRef.current?.classList.add("open");
+					headerRef.current!.style.display = "block";
+				} else {
+					headerRef.current!.style.display = "block";
+				}
+			} else {
+				headerRef.current?.classList.remove("open");
+				headerRef.current!.style.display = "none";
+			}
+		};
+
+		window.addEventListener("resize", resizeHandler);
+
+		return () => {
+			window.removeEventListener("resize", resizeHandler);
+		};
+	});
+
 	return (
 		<div className="header-top" ref={headerRef}>
 			<div className="header-top-area">
