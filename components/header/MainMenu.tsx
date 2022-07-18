@@ -17,39 +17,29 @@ const MainMenu = () => {
 		e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
 	) => {
 		e.preventDefault();
-		if (mobileState) {
+		if (status === "authenticated") {
 			userRef.current?.classList.remove("open");
 			(userRef.current!.children[1] as HTMLUListElement).style.display = "none";
-			directoryRef.current?.classList.toggle("open");
-			directoryRef.current?.classList.contains("open")
-				? ((directoryRef.current!.children[1] as HTMLUListElement).style.display =
-						"block")
-				: ((directoryRef.current!.children[1] as HTMLUListElement).style.display =
-						"none");
 		}
+		directoryRef.current?.classList.toggle("open");
+		directoryRef.current?.classList.contains("open")
+			? ((directoryRef.current!.children[1] as HTMLUListElement).style.display =
+					"block")
+			: ((directoryRef.current!.children[1] as HTMLUListElement).style.display =
+					"none");
 	};
 	const toggleUserDropDown = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
 		e.preventDefault();
-		if (mobileState) {
-			if (status === "authenticated" || status !== "loading") {
-				directoryRef.current?.classList.remove("open");
-				(directoryRef.current!.children[1] as HTMLUListElement).style.display =
-					"none";
-				userRef.current?.classList.toggle("open");
-				userRef.current?.classList.contains("open")
-					? ((userRef.current!.children[1] as HTMLUListElement).style.display =
-							"block")
-					: ((userRef.current!.children[1] as HTMLUListElement).style.display =
-							"none");
-			}
+		if (status === "authenticated" || status !== "loading") {
+			directoryRef.current?.classList.remove("open");
+			(directoryRef.current!.children[1] as HTMLUListElement).style.display = "none";
+			userRef.current?.classList.toggle("open");
+			userRef.current?.classList.contains("open")
+				? ((userRef.current!.children[1] as HTMLUListElement).style.display = "block")
+				: ((userRef.current!.children[1] as HTMLUListElement).style.display = "none");
 		}
 	};
-	useEffect(() => {
-		if (window.innerWidth >= 990) {
-			setMobileState(true);
-		}
-		return () => setMobileState(false);
-	}, []);
+	// useEffect(() => {}, []);
 
 	return (
 		<div className="header-bottom">
