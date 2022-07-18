@@ -11,7 +11,7 @@ const HomeBanner = () => {
 							<div className="banner-inner">
 								<div className="banner-thumb">
 									<Image
-										src="/images/banner/01.png"
+										src="/images/banner/santri.jpg"
 										alt="Banner-image"
 										width={667}
 										height={630}

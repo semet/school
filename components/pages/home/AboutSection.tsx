@@ -40,7 +40,7 @@ const AboutSection: React.FC<Props> = ({ description }) => {
 										</div>
 										<div className="about-fg-img">
 											<Image
-												src="/images/about/02.png"
+												src="/images/banner/baok.jpg"
 												alt="about-image"
 												width={426}
 												height={553}
