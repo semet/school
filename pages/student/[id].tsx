@@ -51,23 +51,9 @@ const Student: NextPageWithLayout<Props> = ({ student }) => {
 											<div className="scholar-other-info">
 												<ul className="lab-ul mt-4">
 													<li className="my-4">
-														<span className="info-title">NIS </span>
+														<span className="info-title">NISN </span>
 														<span className="info-details">
-															: {student.nis}
-														</span>
-													</li>
-													<li className="my-4">
-														<span className="info-title">Email </span>
-														<span className="info-details">
-															: {student.email}
-														</span>
-													</li>
-													<li className="my-4">
-														<span className="info-title">
-															Phone Number{" "}
-														</span>
-														<span className="info-details">
-															: {student.phone}
+															: {student.nisn}
 														</span>
 													</li>
 													<li className="my-4">

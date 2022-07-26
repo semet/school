@@ -21,7 +21,7 @@ const StudentCard: React.FC<Props> = ({ student }) => {
 								<h6 className="card-title mb-0">{student.name}</h6>
 							</a>
 						</Link>
-						<p className="card-text mb-3">{student.nis}</p>
+						<p className="card-text mb-3">{student.nisn}</p>
 					</div>
 					<hr />
 				</div>

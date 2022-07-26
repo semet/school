@@ -100,12 +100,8 @@ model Student {
    yearId          Int
    classRoom       ClassRoom   @relation(fields: [classRoomId], references: [id])
    classRoomId     Int
-   nis             String @unique
    nisn            String @unique
    name            String
-   email           String @unique
-   emailVerified   Boolean @default(false)
-   phone           String?
    password        String
    gender          Gender
    birthDate       DateTime
