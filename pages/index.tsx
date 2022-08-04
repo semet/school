@@ -48,7 +48,7 @@ export default Home;
 
 export const getStaticProps: GetStaticProps = async () => {
 	const about = await prisma.about.findFirst();
-
+	console.log(about);
 	return {
 		props: {
 			description: JSON.parse(JSON.stringify(about?.description)),
