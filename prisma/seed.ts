@@ -220,12 +220,9 @@ const departmentSeed = async () => {
 								const data: Prisma.StudentCreateManyInput = {
 									classRoomId: classRoom.id,
 									yearId: 6,
-									nis: new Date().getTime().toString(),
+
 									nisn: new Date().getTime().toString(),
 									name: faker.name.findName(),
-									email: faker.internet.email(),
-									emailVerified: true,
-									phone: faker.phone.number(),
 									password: hashSync("123456", 10),
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
@@ -258,12 +255,9 @@ const departmentSeed = async () => {
 								const data: Prisma.StudentCreateManyInput = {
 									classRoomId: classRoom.id,
 									yearId: 6,
-									nis: new Date().getTime().toString(),
+
 									nisn: new Date().getTime().toString(),
 									name: faker.name.findName(),
-									email: faker.internet.email(),
-									emailVerified: true,
-									phone: faker.phone.number(),
 									password: hashSync("123456", 10),
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
@@ -311,12 +305,9 @@ const departmentSeed = async () => {
 								const data: Prisma.StudentCreateManyInput = {
 									classRoomId: classRoom.id,
 									yearId: 5,
-									nis: new Date().getTime().toString(),
+
 									nisn: new Date().getTime().toString(),
 									name: faker.name.findName(),
-									email: faker.internet.email(),
-									emailVerified: true,
-									phone: faker.phone.number(),
 									password: hashSync("123456", 10),
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
@@ -349,12 +340,9 @@ const departmentSeed = async () => {
 								const data: Prisma.StudentCreateManyInput = {
 									classRoomId: classRoom.id,
 									yearId: 5,
-									nis: new Date().getTime().toString(),
+
 									nisn: new Date().getTime().toString(),
 									name: faker.name.findName(),
-									email: faker.internet.email(),
-									emailVerified: true,
-									phone: faker.phone.number(),
 									password: hashSync("123456", 10),
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
@@ -402,12 +390,9 @@ const departmentSeed = async () => {
 								const data: Prisma.StudentCreateManyInput = {
 									classRoomId: classRoom.id,
 									yearId: 4,
-									nis: new Date().getTime().toString(),
+
 									nisn: new Date().getTime().toString(),
 									name: faker.name.findName(),
-									email: faker.internet.email(),
-									emailVerified: true,
-									phone: faker.phone.number(),
 									password: hashSync("123456", 10),
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
@@ -440,12 +425,9 @@ const departmentSeed = async () => {
 								const data: Prisma.StudentCreateManyInput = {
 									classRoomId: classRoom.id,
 									yearId: 4,
-									nis: new Date().getTime().toString(),
+
 									nisn: new Date().getTime().toString(),
 									name: faker.name.findName(),
-									email: faker.internet.email(),
-									emailVerified: true,
-									phone: faker.phone.number(),
 									password: hashSync("123456", 10),
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
@@ -493,12 +475,9 @@ const departmentSeed = async () => {
 								const data: Prisma.StudentCreateManyInput = {
 									classRoomId: classRoom.id,
 									yearId: 3,
-									nis: new Date().getTime().toString(),
+
 									nisn: new Date().getTime().toString(),
 									name: faker.name.findName(),
-									email: faker.internet.email(),
-									emailVerified: true,
-									phone: faker.phone.number(),
 									password: hashSync("123456", 10),
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
@@ -531,12 +510,9 @@ const departmentSeed = async () => {
 								const data: Prisma.StudentCreateManyInput = {
 									classRoomId: classRoom.id,
 									yearId: 3,
-									nis: new Date().getTime().toString(),
+
 									nisn: new Date().getTime().toString(),
 									name: faker.name.findName(),
-									email: faker.internet.email(),
-									emailVerified: true,
-									phone: faker.phone.number(),
 									password: hashSync("123456", 10),
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
@@ -584,12 +560,9 @@ const departmentSeed = async () => {
 								const data: Prisma.StudentCreateManyInput = {
 									classRoomId: classRoom.id,
 									yearId: 2,
-									nis: new Date().getTime().toString(),
+
 									nisn: new Date().getTime().toString(),
 									name: faker.name.findName(),
-									email: faker.internet.email(),
-									emailVerified: true,
-									phone: faker.phone.number(),
 									password: hashSync("123456", 10),
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
@@ -622,12 +595,9 @@ const departmentSeed = async () => {
 								const data: Prisma.StudentCreateManyInput = {
 									classRoomId: classRoom.id,
 									yearId: 2,
-									nis: new Date().getTime().toString(),
+
 									nisn: new Date().getTime().toString(),
 									name: faker.name.findName(),
-									email: faker.internet.email(),
-									emailVerified: true,
-									phone: faker.phone.number(),
 									password: hashSync("123456", 10),
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
@@ -675,12 +645,9 @@ const departmentSeed = async () => {
 								const data: Prisma.StudentCreateManyInput = {
 									classRoomId: classRoom.id,
 									yearId: 1,
-									nis: new Date().getTime().toString(),
+
 									nisn: new Date().getTime().toString(),
 									name: faker.name.findName(),
-									email: faker.internet.email(),
-									emailVerified: true,
-									phone: faker.phone.number(),
 									password: hashSync("123456", 10),
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
@@ -713,12 +680,9 @@ const departmentSeed = async () => {
 								const data: Prisma.StudentCreateManyInput = {
 									classRoomId: classRoom.id,
 									yearId: 1,
-									nis: new Date().getTime().toString(),
+
 									nisn: new Date().getTime().toString(),
 									name: faker.name.findName(),
-									email: faker.internet.email(),
-									emailVerified: true,
-									phone: faker.phone.number(),
 									password: hashSync("123456", 10),
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
@@ -793,12 +757,9 @@ const departmentSeed = async () => {
 								const data: Prisma.StudentCreateManyInput = {
 									classRoomId: classRoom.id,
 									yearId: 6,
-									nis: new Date().getTime().toString(),
+
 									nisn: new Date().getTime().toString(),
 									name: faker.name.findName(),
-									email: faker.internet.email(),
-									emailVerified: true,
-									phone: faker.phone.number(),
 									password: hashSync("123456", 10),
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
@@ -831,12 +792,9 @@ const departmentSeed = async () => {
 								const data: Prisma.StudentCreateManyInput = {
 									classRoomId: classRoom.id,
 									yearId: 6,
-									nis: new Date().getTime().toString(),
+
 									nisn: new Date().getTime().toString(),
 									name: faker.name.findName(),
-									email: faker.internet.email(),
-									emailVerified: true,
-									phone: faker.phone.number(),
 									password: hashSync("123456", 10),
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
@@ -884,12 +842,9 @@ const departmentSeed = async () => {
 								const data: Prisma.StudentCreateManyInput = {
 									classRoomId: classRoom.id,
 									yearId: 5,
-									nis: new Date().getTime().toString(),
+
 									nisn: new Date().getTime().toString(),
 									name: faker.name.findName(),
-									email: faker.internet.email(),
-									emailVerified: true,
-									phone: faker.phone.number(),
 									password: hashSync("123456", 10),
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
@@ -922,12 +877,9 @@ const departmentSeed = async () => {
 								const data: Prisma.StudentCreateManyInput = {
 									classRoomId: classRoom.id,
 									yearId: 5,
-									nis: new Date().getTime().toString(),
+
 									nisn: new Date().getTime().toString(),
 									name: faker.name.findName(),
-									email: faker.internet.email(),
-									emailVerified: true,
-									phone: faker.phone.number(),
 									password: hashSync("123456", 10),
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
@@ -975,12 +927,9 @@ const departmentSeed = async () => {
 								const data: Prisma.StudentCreateManyInput = {
 									classRoomId: classRoom.id,
 									yearId: 4,
-									nis: new Date().getTime().toString(),
+
 									nisn: new Date().getTime().toString(),
 									name: faker.name.findName(),
-									email: faker.internet.email(),
-									emailVerified: true,
-									phone: faker.phone.number(),
 									password: hashSync("123456", 10),
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
@@ -1013,12 +962,9 @@ const departmentSeed = async () => {
 								const data: Prisma.StudentCreateManyInput = {
 									classRoomId: classRoom.id,
 									yearId: 4,
-									nis: new Date().getTime().toString(),
+
 									nisn: new Date().getTime().toString(),
 									name: faker.name.findName(),
-									email: faker.internet.email(),
-									emailVerified: true,
-									phone: faker.phone.number(),
 									password: hashSync("123456", 10),
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
@@ -1093,12 +1039,9 @@ const departmentSeed = async () => {
 								const data: Prisma.StudentCreateManyInput = {
 									classRoomId: classRoom.id,
 									yearId: 3,
-									nis: new Date().getTime().toString(),
+
 									nisn: new Date().getTime().toString(),
 									name: faker.name.findName(),
-									email: faker.internet.email(),
-									emailVerified: true,
-									phone: faker.phone.number(),
 									password: hashSync("123456", 10),
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
@@ -1131,12 +1074,9 @@ const departmentSeed = async () => {
 								const data: Prisma.StudentCreateManyInput = {
 									classRoomId: classRoom.id,
 									yearId: 3,
-									nis: new Date().getTime().toString(),
+
 									nisn: new Date().getTime().toString(),
 									name: faker.name.findName(),
-									email: faker.internet.email(),
-									emailVerified: true,
-									phone: faker.phone.number(),
 									password: hashSync("123456", 10),
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
@@ -1184,12 +1124,9 @@ const departmentSeed = async () => {
 								const data: Prisma.StudentCreateManyInput = {
 									classRoomId: classRoom.id,
 									yearId: 2,
-									nis: new Date().getTime().toString(),
+
 									nisn: new Date().getTime().toString(),
 									name: faker.name.findName(),
-									email: faker.internet.email(),
-									emailVerified: true,
-									phone: faker.phone.number(),
 									password: hashSync("123456", 10),
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
@@ -1222,12 +1159,9 @@ const departmentSeed = async () => {
 								const data: Prisma.StudentCreateManyInput = {
 									classRoomId: classRoom.id,
 									yearId: 2,
-									nis: new Date().getTime().toString(),
+
 									nisn: new Date().getTime().toString(),
 									name: faker.name.findName(),
-									email: faker.internet.email(),
-									emailVerified: true,
-									phone: faker.phone.number(),
 									password: hashSync("123456", 10),
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
@@ -1275,12 +1209,9 @@ const departmentSeed = async () => {
 								const data: Prisma.StudentCreateManyInput = {
 									classRoomId: classRoom.id,
 									yearId: 1,
-									nis: new Date().getTime().toString(),
+
 									nisn: new Date().getTime().toString(),
 									name: faker.name.findName(),
-									email: faker.internet.email(),
-									emailVerified: true,
-									phone: faker.phone.number(),
 									password: hashSync("123456", 10),
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
@@ -1313,12 +1244,9 @@ const departmentSeed = async () => {
 								const data: Prisma.StudentCreateManyInput = {
 									classRoomId: classRoom.id,
 									yearId: 1,
-									nis: new Date().getTime().toString(),
+
 									nisn: new Date().getTime().toString(),
 									name: faker.name.findName(),
-									email: faker.internet.email(),
-									emailVerified: true,
-									phone: faker.phone.number(),
 									password: hashSync("123456", 10),
 									birthDate: faker.date.birthdate(),
 									birthPlace: faker.address.streetAddress(),
@@ -1346,6 +1274,7 @@ const lessonSeed = async () => {
 				},
 			},
 			code: faker.random.alphaNumeric(5),
+			time: 2,
 			name: "Pendidikan Agama dan Budi Pekerti",
 			description: faker.lorem.paragraph(),
 		};
@@ -1395,6 +1324,7 @@ const lessonSeed = async () => {
 				},
 			},
 			code: faker.random.alphaNumeric(5),
+			time: 2,
 			name: "Pendidikan Pancasila dan Kewarganegaran",
 			description: faker.lorem.paragraph(),
 		};
@@ -1444,6 +1374,7 @@ const lessonSeed = async () => {
 				},
 			},
 			code: faker.random.alphaNumeric(5),
+			time: 2,
 			name: "Bahasa Indonesia",
 			description: faker.lorem.paragraph(),
 		};
@@ -1493,6 +1424,7 @@ const lessonSeed = async () => {
 				},
 			},
 			code: faker.random.alphaNumeric(5),
+			time: 2,
 			name: "Matematika",
 			description: faker.lorem.paragraph(),
 		};
@@ -1542,6 +1474,7 @@ const lessonSeed = async () => {
 				},
 			},
 			code: faker.random.alphaNumeric(5),
+			time: 2,
 			name: "Ilmu Pengetahuan Alam",
 			description: faker.lorem.paragraph(),
 		};
@@ -1591,6 +1524,7 @@ const lessonSeed = async () => {
 				},
 			},
 			code: faker.random.alphaNumeric(5),
+			time: 2,
 			name: "Ilmu Pengetahuan Sosial",
 			description: faker.lorem.paragraph(),
 		};
@@ -1640,6 +1574,7 @@ const lessonSeed = async () => {
 				},
 			},
 			code: faker.random.alphaNumeric(5),
+			time: 2,
 			name: "Seni Budaya dan Prakarya",
 			description: faker.lorem.paragraph(),
 		};
@@ -1689,6 +1624,7 @@ const lessonSeed = async () => {
 				},
 			},
 			code: faker.random.alphaNumeric(5),
+			time: 2,
 			name: "Pendidikan Jasmani, Olahraga, dan Kesehatan",
 			description: faker.lorem.paragraph(),
 		};
@@ -1744,6 +1680,7 @@ const lessonSeed = async () => {
 				},
 			},
 			code: faker.random.alphaNumeric(5),
+			time: 2,
 			name: "Pendidikan Agama dan Budi Pekerti",
 			description: faker.lorem.paragraph(),
 		};
@@ -1793,6 +1730,7 @@ const lessonSeed = async () => {
 				},
 			},
 			code: faker.random.alphaNumeric(5),
+			time: 2,
 			name: "Pendidikan Pancasila dan Kewarganegaraan",
 			description: faker.lorem.paragraph(),
 		};
@@ -1842,6 +1780,7 @@ const lessonSeed = async () => {
 				},
 			},
 			code: faker.random.alphaNumeric(5),
+			time: 2,
 			name: "Bahasa Indonesia",
 			description: faker.lorem.paragraph(),
 		};
@@ -1891,6 +1830,7 @@ const lessonSeed = async () => {
 				},
 			},
 			code: faker.random.alphaNumeric(5),
+			time: 2,
 			name: "Matematika",
 			description: faker.lorem.paragraph(),
 		};
@@ -1940,6 +1880,7 @@ const lessonSeed = async () => {
 				},
 			},
 			code: faker.random.alphaNumeric(5),
+			time: 2,
 			name: "Ilmu Pengetahuan Alam",
 			description: faker.lorem.paragraph(),
 		};
@@ -1989,6 +1930,7 @@ const lessonSeed = async () => {
 				},
 			},
 			code: faker.random.alphaNumeric(5),
+			time: 2,
 			name: "Ilmu Pengetahuan Sosial",
 			description: faker.lorem.paragraph(),
 		};
@@ -2038,6 +1980,7 @@ const lessonSeed = async () => {
 				},
 			},
 			code: faker.random.alphaNumeric(5),
+			time: 2,
 			name: "Bahasa Inggris",
 			description: faker.lorem.paragraph(),
 		};
@@ -2087,6 +2030,7 @@ const lessonSeed = async () => {
 				},
 			},
 			code: faker.random.alphaNumeric(5),
+			time: 2,
 			name: "Seni Budaya",
 			description: faker.lorem.paragraph(),
 		};
@@ -2136,6 +2080,7 @@ const lessonSeed = async () => {
 				},
 			},
 			code: faker.random.alphaNumeric(5),
+			time: 2,
 			name: "Bahasa Daerah",
 			description: faker.lorem.paragraph(),
 		};
@@ -2185,6 +2130,7 @@ const lessonSeed = async () => {
 				},
 			},
 			code: faker.random.alphaNumeric(5),
+			time: 2,
 			name: "Pendidikan Jasmani, Olahraga dan Kesehatan",
 			description: faker.lorem.paragraph(),
 		};
@@ -2234,6 +2180,7 @@ const lessonSeed = async () => {
 				},
 			},
 			code: faker.random.alphaNumeric(5),
+			time: 2,
 			name: "Prakarya",
 			description: faker.lorem.paragraph(),
 		};
@@ -2289,6 +2236,7 @@ const lessonSeed = async () => {
 				},
 			},
 			code: faker.random.alphaNumeric(5),
+			time: 2,
 			name: "Pendidikan Agama",
 			description: faker.lorem.paragraph(),
 		};
@@ -2338,6 +2286,7 @@ const lessonSeed = async () => {
 				},
 			},
 			code: faker.random.alphaNumeric(5),
+			time: 2,
 			name: "PPKn",
 			description: faker.lorem.paragraph(),
 		};
@@ -2387,6 +2336,7 @@ const lessonSeed = async () => {
 				},
 			},
 			code: faker.random.alphaNumeric(5),
+			time: 2,
 			name: "Bahasa Indonesia",
 			description: faker.lorem.paragraph(),
 		};
@@ -2436,6 +2386,7 @@ const lessonSeed = async () => {
 				},
 			},
 			code: faker.random.alphaNumeric(5),
+			time: 2,
 			name: "Matematika",
 			description: faker.lorem.paragraph(),
 		};
@@ -2485,6 +2436,7 @@ const lessonSeed = async () => {
 				},
 			},
 			code: faker.random.alphaNumeric(5),
+			time: 2,
 			name: "IPA",
 			description: faker.lorem.paragraph(),
 		};
@@ -2534,6 +2486,7 @@ const lessonSeed = async () => {
 				},
 			},
 			code: faker.random.alphaNumeric(5),
+			time: 2,
 			name: "IPS",
 			description: faker.lorem.paragraph(),
 		};
@@ -2583,6 +2536,7 @@ const lessonSeed = async () => {
 				},
 			},
 			code: faker.random.alphaNumeric(5),
+			time: 2,
 			name: "Bahasa Inggris",
 			description: faker.lorem.paragraph(),
 		};
@@ -2632,6 +2586,7 @@ const lessonSeed = async () => {
 				},
 			},
 			code: faker.random.alphaNumeric(5),
+			time: 2,
 			name: "Seni dan Prakarya",
 			description: faker.lorem.paragraph(),
 		};
@@ -2681,6 +2636,7 @@ const lessonSeed = async () => {
 				},
 			},
 			code: faker.random.alphaNumeric(5),
+			time: 2,
 			name: "Pendidikan Jasmani",
 			description: faker.lorem.paragraph(),
 		};
@@ -2730,6 +2686,7 @@ const lessonSeed = async () => {
 				},
 			},
 			code: faker.random.alphaNumeric(5),
+			time: 2,
 			name: "Informatika",
 			description: faker.lorem.paragraph(),
 		};
@@ -2779,6 +2736,7 @@ const lessonSeed = async () => {
 				},
 			},
 			code: faker.random.alphaNumeric(5),
+			time: 2,
 			name: "Program Pengembangan Karakter",
 			description: faker.lorem.paragraph(),
 		};
