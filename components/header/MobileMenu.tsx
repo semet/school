@@ -29,7 +29,7 @@ const MobileMenu = () => {
 			<div className="logo">
 				<Link href="/">
 					<a>
-						<img src="/images/logo/01.png" alt="Abu Darda Logo" />
+						<img src="/images/logo/logo.png" alt="Abu Darda Logo" />
 					</a>
 				</Link>
 			</div>
